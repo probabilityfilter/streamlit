@@ -9,14 +9,10 @@ import streamlit as st
 
 st.title('Simple Streamlit App')
 
-st.text('Type a number in the box below')
-
-#n = st.number_input('Number', step=1)
-
-#st.write(f'{n} + 1 = {n+1}')
+x = st.slider('x')
+st.write(x, 'squared is', x * x)
 
 s = st.text_input('Type a name in the box below')
-
 st.write(f'Hello {s}')
 
 if st.button('Say hello'):
