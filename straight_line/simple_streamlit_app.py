@@ -11,16 +11,16 @@ from bokeh.plotting import figure
 
 st.title('Simple Classification')
 
-slope = st.slider('Slope')
+angle = st.slider('Angle',0, 100, 25, 10)
 intercept = st.slider('Intercept')
 
 x = np.arange(-3.0, 3.0, 0.1)
-y = slope * x + intercept
+y = np.tan(np.radians(angle)) * x + intercept
 
 p = figure(
-    title="Mohr's Circle",
-    x_axis_label="stress",
-    y_axis_label="shear",
+    title="Staright Line",
+    x_axis_label="x-axis",
+    y_axis_label="y-axis",
     match_aspect=True,
     tools="pan,reset,save,wheel_zoom",
 )
