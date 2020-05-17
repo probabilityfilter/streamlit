@@ -11,10 +11,10 @@ from bokeh.plotting import figure
 
 st.title('Simple Classification')
 
-angle = st.slider('Angle',0, 100, 25, 10)
-intercept = st.slider('Intercept')
+angle = st.slider('Angle', 0, 180, 45)
+intercept = st.slider('Intercept', -5.0, 5.0, 0.0, 0.1)
 
-x = np.arange(-3.0, 3.0, 0.1)
+x = np.arange(-5.0, 5.0, 0.1)
 y = np.tan(np.radians(angle)) * x + intercept
 
 p = figure(
