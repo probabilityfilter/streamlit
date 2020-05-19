@@ -11,8 +11,8 @@ from bokeh.plotting import figure
 
 st.title('Simple Classification')
 
-angle = st.slider('Angle', 0, 180, 45)
-intercept = st.slider('Intercept', -5.0, 5.0, 0.0, 0.1)
+angle = st.sidebar.slider('Angle', 0, 180, 45)
+intercept = st.sidebar.slider('Intercept', -5.0, 5.0, 0.0, 0.1)
 
 x = np.arange(-5.0, 5.0, 0.1)
 y = np.tan(np.radians(angle)) * x + intercept
@@ -23,6 +23,8 @@ p = figure(
     y_axis_label="y-axis",
     match_aspect=False,
     tools="pan,reset,save,wheel_zoom",
+    x_range=(-5, 5),
+    y_range=(-5, 5)
 )
 
 p.line(x, y, color="#ff7f0e", line_width=3, line_alpha=0.6)
