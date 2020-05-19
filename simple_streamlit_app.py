@@ -21,7 +21,7 @@ p = figure(
     title="Staright Line",
     x_axis_label="x-axis",
     y_axis_label="y-axis",
-    match_aspect=True,
+    match_aspect=False,
     tools="pan,reset,save,wheel_zoom",
 )
 
